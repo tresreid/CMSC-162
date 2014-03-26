@@ -1,0 +1,35 @@
+%{ 
+// prop_formula.y 
+// parsing for boolean expressions 
+%}
+
+%token AND OR IMPLIES NOT OPEN_PAREN CLOSE_PAREN VAR 
+
+%% 
+
+
+imp
+:intersec
+|imp IMPLIES imp
+;
+
+intersec
+:unions
+|unions OR unions
+;
+
+unions
+:neg
+|neg AND neg
+;
+
+neg
+:quantity
+|Not neg
+;
+
+quantity
+:VAR
+|OPEN_PAREN quantity CLOSE_PAREN
+;
+%%

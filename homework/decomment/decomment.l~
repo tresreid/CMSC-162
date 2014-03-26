@@ -1,0 +1,48 @@
+%{
+/* decomment.l 
+ * remove comments from C source files. 
+ */ 
+
+#include <stdio.h> 
+#include <stdlib.h> 
+
+%} 
+
+%option noyywrap 
+
+%x COMMENT 
+
+%% 
+
+<INITIAL>\"(\\.|[^"])*\" {
+/* skip over string literals /*
+putchar(yytext[0]);
+}
+<INITIAL>"/*" { 
+/* Match the beginning of a multi-line comment */ 
+BEGIN COMMENT; 
+} 
+
+<INITIAL>"//".* { 
+/* Match a single-line comment */ 
+}
+<INITIAL>.|\n { 
+putchar(yytext[0]); 
+} 
+<COMMENT>"*/" { 
+/* Recognize the end of a comment */ 
+BEGIN INITIAL; 
+} 
+<COMMENT>. { 
+/* Dispense with characters in multi-line comments */ 
+} 
+<COMMENT>\n { 
+putchar('\n'); 
+} 
+
+%% 
+
+int main (int argc, char **argv) { 
+yylex(); 
+exit(0); 
+}

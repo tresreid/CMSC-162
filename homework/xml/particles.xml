@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<particles>    
+  <quark number-of-types="6">
+    <particle>
+      <name>Up Quark</name>
+      <mass>1.5-3.3</mass>
+      <charge> 2/3</charge>
+      <symbol> u </symbol>
+    </particle>
+    <particle>
+      <name>Down Quark</name>
+      <mass>3.6-6.0</mass>
+      <charge> -1/3</charge>
+      <symbol> d </symbol>
+    </particle>
+    <particle>
+      <name>Charm Quark</name>
+      <mass>1160-1.340</mass>
+      <charge>2/3</charge>
+      <symbol>c</symbol>
+    </particle>
+    <particle>
+      <name>Strange Quark</name>
+      <mass>70-130</mass>
+      <charge>-1/3</charge>
+      <symbol>s</symbol>
+    </particle>
+    <particle>
+      <name>Top Quark</name>
+      <mass>169100-173300</mass>
+      <charge>2/3</charge>
+      <symbol>t</symbol>
+    </particle>
+    <particle>
+      <name>Bottom Quark</name>
+      <mass>4130-4370</mass>
+      <charge>-1/3</charge>
+      <symbol>b</symbol>
+    </particle>
+  </quark>
+  <lepton number-of-types="6">
+    <particle>
+      <name>Electron</name>
+      <mass> 0.511</mass>
+      <charge>-1</charge>
+      <symbol>e-</symbol>
+    </particle>
+    <particle>
+      <name>Electron Neutrino</name>
+      <mass>.0000022</mass>
+      <charge>0</charge>
+      <symbol>ve</symbol>
+    </particle>
+    <particle>
+      <name>Muon</name>
+      <mass>105.7</mass>
+      <charge>-1</charge>
+      <symbol>u-</symbol>
+    </particle>
+    <particle>
+      <name>Muon Neutrino</name>
+      <mass>0.170</mass>
+      <charge>0</charge>
+      <symbol>vu</symbol>
+    </particle>
+    <particle>
+      <name>Tau</name>
+      <mass>1.777</mass>
+      <charge>-1</charge>
+      <symbol>t-</symbol>
+    </particle>
+    <particle>
+      <name>Tau Neutrino</name>
+      <mass>15.5</mass>
+      <charge>0</charge>
+      <symbol>vt</symbol>
+    </particle>
+  </lepton>
+  <boson>
+    <force-carrier>
+      <name>Photon</name>
+      <mass>0</mass>
+      <charge>0</charge>
+      <symbol>Y</symbol>
+      <force>Electromagnetism</force>
+    </force-carrier>
+    <force-carrier>
+      <name>W boson</name>
+      <mass>80.4</mass>
+      <charge>-1</charge>
+      <symbol>W-</symbol>
+      <force>Weak Force</force>
+    </force-carrier>
+    <force-carrier>
+      <name>Z boson</name>
+      <mass>91.2</mass>
+      <charge>0</charge>
+      <symbol>Z</symbol>
+      <force>Weak Force</force>
+    </force-carrier>
+    <force-carrier>
+      <name>Gluon</name>
+      <mass>0</mass>
+      <charge>0</charge>
+      <symbol>g</symbol>
+      <force>Strong Force</force>
+    </force-carrier>
+    <force-carrier>
+      <name>Higgs boson</name>
+      <mass>125.3</mass>
+      <charge>0</charge>
+      <symbol>H</symbol>
+      <force>Mass</force>
+    </force-carrier>
+    <force-carrier>
+      <name>Graviton</name>
+      <mass>0</mass>
+      <charge>0</charge>
+      <symbol>G</symbol>
+      <force>Gravitation</force>
+    </force-carrier>
+  </boson>
+</particles>

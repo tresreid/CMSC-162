@@ -1,0 +1,16 @@
+Michael Reid
+Omar Agha
+Ben Call
+
+Problems:                               Solution:
+the files never close -			use fclose at the end 
+
+overflow error with words over 100	use fread instead of fscanf so
+characters because of buf[100] 
+(shouldn't normally be a problem	there is no longer an overflow.
+but it is with segfault.txt)
+
+spaces are thrown out			use fread instead of fscanf.
+
+
+*using fread also seems like the way to make the program more efficent. 

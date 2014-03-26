@@ -1,0 +1,43 @@
+atomic-weight
+Stuart Kurtz
+
+BUILDING
+
+This is the source directory for the atomic-weight directory.  To build the
+program, simply
+
+	% make
+
+This will compile atomic-weight, and copy ./mass_data to ~/.mass_data.
+The latter is the element database file that atomic-weight relies on.
+The program can be tested by running
+
+	% make test
+
+which will compute the mass of Octane [CH3(CH2)6CH3], which should be
+114.228520.
+
+RUNNING
+
+The program runs in one of two modes.  If command line arguments are
+specified, they are interpreted as chemical formulae, and the weights
+are reported one per line, in argument order.  If no command line arguments
+are reported, the program attempts to read chemical formulae, one per line,
+and reports their weights.
+
+INSTALLING
+
+The program can be installed by
+
+	% make install
+
+This will copy atomic-weight to ~/bin, assuming ~/bin exists.
+
+BUGS
+
+The program should really look the database file in a number of locations --
+per system, per user, and per directory.  This isn't hard to do, it's just
+hard to do elegantly.
+
+The code is radically inadequately commented.
+

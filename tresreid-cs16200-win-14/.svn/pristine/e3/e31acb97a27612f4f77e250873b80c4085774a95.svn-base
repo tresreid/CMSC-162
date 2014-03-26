@@ -1,0 +1,40 @@
+#!/usr/bin/awk -f
+
+BEGIN{
+    FS="[ ]+"
+    RS="\n"
+}
+$8 ~ /SPAM/ {
+    scount+=1
+    score+= $18
+}
+$8 ~ /CLEAN/ {
+    ccount+=1
+}
+$7 ~ /Checking/ {
+    sender[$8]+=1
+    recipient[$10]+=1
+}
+$8 ~ /INFECTED/ {
+    icount+=1
+}
+END{
+    print("spam: ", scount);
+    print("ham: ", ccount);
+    print("Infected files: ", icount);
+    print("Spam to Ham ratio: ", (scount/ccount));
+    print("Average Spam score: ", (score/scount));
+    for (i in sender){
+	senders[j] = i
+	j++
+    }
+    n = asort(senders)
+    for (i=1; i<=n; i++){
+	print senders[i], sender[senders[i]]
+    }
+    for (i in recipient) {
+	print i,": ", recipient[i];
+    }
+    print("total: ", total);
+}
+   

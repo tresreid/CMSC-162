@@ -1,0 +1,10 @@
+#!/usr/bin/python
+
+import random
+
+def gen():
+    print "\t0x%08x," % random.randrange(0,2**31-1)
+    
+random.seed(0)
+for i in range(0,255):
+    gen()

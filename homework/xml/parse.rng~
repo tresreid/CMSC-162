@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--parse.rng --> 
+<element name='course-schedule' xmlns="http://relaxng.org/ns/structure/1.0">
+  <zeroOrMore>
+    <element name ="fermion">
+      <attribute name ="type">
+        <text/>
+      </attribute>
+      <zeroOrMore>
+	<element name="particle"
+          <element name="name">
+             <text/>
+          </element>
+          <element name="mass">
+             <text/>
+          </element>
+          <element name="charge">
+             <text/>
+          </element>
+          <element name="spin">
+             <text/>
+          </element>
+        </element>
+      </zeroOrMore>
+    </element>
+  </zeroOrMore>
+</element>

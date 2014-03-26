@@ -1,0 +1,56 @@
+//animals.c
+
+typedef int boolean;
+#define FALSE 0
+#define TRUE !FALSE
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define MAXSTRLEN 80
+#define MAXNUMQS 32
+
+typedef char **TreeType;
+typedef int PositionType;
+
+/*
+ * Function prototypes.
+ */
+TreeType InitTree ( );
+void PrintTree (TreeType tree);
+PositionType Top (TreeType tree);
+boolean IsLeaf (TreeType tree, PositionType pos);
+boolean Answer (char *question);
+char *Question (TreeType tree, PositionType pos);
+char *Guess (TreeType tree, PositionType pos);
+PositionType YesNode (TreeType tree, PositionType pos);
+PositionType NoNode (TreeType tree, PositionType pos);
+void ReplaceNode (TreeType tree, PositionType pos, char *newA, char *newQ);
+void GetNewInfo (TreeType tree, PositionType pos, char **newA, char **newQ);
+
+
+int main ( ) {
+	TreeType tree;
+	PositionType pos;
+	char *newQuestion, *newAnswer;
+	tree = InitTree ( );
+	printf("%s", "Think of an animal. I will try to guess what it is.\n"
+	"Please answer my questions with yes or no.\n");
+	while (TRUE) {
+		pos = Top (tree);
+		while (!IsLeaf (tree, pos)) {
+			pos = Answer (Question (tree, pos))? 
+				YesNode (tree, pos): NoNode (tree, pos);
+		}
+		if (Answer (Guess (tree, pos))) {
+			printf ("I got it right!\n");
+		} else {
+			GetNewInfo (tree, pos, &newAnswer, &newQuestion);
+			ReplaceNode (tree, pos, newAnswer, newQuestion);
+		}
+		if (!Answer ("Want to play again? ")) {
+			return 0;
+		}
+	}
+}

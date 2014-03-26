@@ -1,0 +1,10 @@
+#!/usr/bin/awk -f
+# foobar
+
+/foo/ {++foo}
+/bar/ {++bar}
+
+END {
+    print "Foo lines: " foo
+    print "Bar lines: " bar
+}

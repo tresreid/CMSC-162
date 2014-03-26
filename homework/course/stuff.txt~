@@ -1,0 +1,17 @@
+/ > xpath //instructor[.='Kurtz']/ancestor::quarter
+Object is a Node Set :
+Set contains 2 nodes:
+1  ELEMENT quarter
+    ATTRIBUTE term
+      TEXT
+        content=Autumn
+    ATTRIBUTE year
+      TEXT
+        content=2009
+2  ELEMENT quarter
+    ATTRIBUTE term
+      TEXT
+        content=Winter
+    ATTRIBUTE year
+      TEXT
+        content=2010

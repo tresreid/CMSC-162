@@ -1,0 +1,10 @@
+Jeff's notes for Tres
+* Include your source.
+* You can get rid of a lot of your brackets, whenever if or else if or else is a one liner.
+* Looks like we used the same algorithm!
+* Looks like 42^7 still doesn't work.
+
+Omar
+*changed to unsigned type so there is no overflow.
+*put your main function in a different .c file so you can use the same I/O with different exponentiation algorithms
+*document your code

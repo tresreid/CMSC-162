@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE library SYSTEM "library.dtd">
+
+<library name="J. Random Hacker's Library">
+<books>
+	<book id="EndersGame94">
+		<title>Ender's Game</title>
+		<author>Orson Scott Card</author>
+		<publisher>Tor Science Fiction</publisher>
+		<year>1994</year>
+	</book>
+	<book id="Hackers">
+		<title>Hackers: Heroes of the Computing Revolution</title>
+		<author>Steven Levy</author>
+	</book>
+	<book id="C">
+		<title>The C Programming Language</title>
+		<author>Brian Kernighan</author>
+		<author>Dennis Ritchie</author>
+		<publisher>Prentice Hall</publisher>
+		<year>1988</year>
+	</book>
+</books>
+
+<movies>
+	<movie id="TBTNBC93">
+		<title>The Nightmare Before Christmas</title>
+	</movie>
+	<movie id="EdWood" oscarwinner="yes">
+		<title>Ed Wood</title>
+	</movie>
+	<movie id="DayBeast95" oscarwinner="no">
+		<title>The Day of the Beast</title>
+	</movie>
+</movies>
+
+<music>
+	<album id="Wembley86">
+		<title>Live at Wembley '86</title>
+		<artist>Queen</artist>
+	</album>
+	<album id="Farewell95">
+		<title>Farewell: Live at Universal Amphitheater</title>
+		<artist>Oingo Boingo</artist>
+	</album>
+	<album id="Oskorri96">
+		<title>25 kantu-urte</title>
+		<artist>Oskorri</artist>
+	</album>
+</music>
+
+</library>

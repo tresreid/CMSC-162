@@ -1,0 +1,9 @@
+#!/bin/bash
+
+d=`date` 
+s=`du -ch ~ |grep total`
+echo -n [$d]' '>> ~/Documents/CMCS162/tresreid-cs16200-win-14/lab1/usage.log
+echo -n ~ ' '>> ~/Documents/CMCS162/tresreid-cs16200-win-14/lab1/usage.log
+echo $s >> ~/Documents/CMCS162/tresreid-cs16200-win-14/lab1/usage.log
+exit 0
+

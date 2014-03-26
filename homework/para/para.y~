@@ -1,0 +1,34 @@
+%
+{ // para.y 
+#include <stdio.h> 
+#include <stdlib.h> 
+
+void yyerror(char *); 
+int yylex(void); 
+
+%}
+
+%start input
+
+%% 
+
+input
+: lines EOFTOK  {YYACCEPT;}
+;
+
+lines
+:
+|lines line
+;
+
+line
+:para   {printf("%f\n", $1);}
+|error EOLN {fprintf(stderr,"invalid\n");}
+|EOLN
+;
+
+para
+: PARENS {$$ = $1;}
+| BRAKET {$$ = $1;}
+| SQIG   {$$ = $1;}
+;

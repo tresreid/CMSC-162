@@ -1,0 +1,14 @@
+CFLAGS= -std=c99
+LEX=flex
+YACC=bison
+YFLAGS= -d
+
+SRC=para.tab.c paratok.c
+
+para: para.tab.o paratok.o
+para.tab.o: para.tab.c
+para.tab.c para.tab.h: para.y
+	${YACC.y} para.y
+
+paratok.o: paratok.c para.tab.h
+paratok.c: paratok.l

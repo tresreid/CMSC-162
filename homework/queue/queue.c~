@@ -1,0 +1,29 @@
+//queue.c
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( int argc, char *argv[]){
+  char *filename;
+  char *line = NULL;
+  File *infile = fopen(*filename, "r");
+  size_t len =0;
+  ssize_t read;
+  sscanf(argv[1], "%d",&filename);
+  if (infile == NULL){
+    printf("Could not open file");
+    exit(-1);
+  }
+  while ((read = getline(&line, &len, infile) != -1){
+      printf("length %zu :\n", read);
+      prinft("%s", line);
+    }
+    if(line)
+      free(line);
+    exit(0);
+
+
+
+
+
+}

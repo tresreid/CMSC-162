@@ -1,0 +1,146 @@
+<course-schedule>
+  <faculty>
+    <name>Babai</name>
+    <name>Chuzhoy</name>
+    <name>Kurtz</name>
+    <name>Mulmuley</name>
+    <name>Razborov</name>
+    <name>Simon</name>
+    <name>Soare</name>
+  </faculty>
+  <quarter term="Autumn" year="2009">
+    <course>
+      <number>CMSC 15300</number>
+      <title>Foundations of Software</title>
+      <instructor type="nontheory">N. Hinrichs</instructor>
+    </course>
+    <course>
+      <number>CMSC 16100</number>
+      <title>Honors Introduction to Computer Science, I</title>
+      <instructor>Kurtz</instructor>
+    </course>
+    <course>
+      <number>CMSC 27100</number>
+      <title>Discrete Mathematics</title>
+      <instructor>Razborov</instructor>
+    </course>
+    <course>
+      <number>CMSC 27700</number>
+      <title>Mathematical Logic I</title>
+      <instructor type="nontheory">Montalban</instructor>
+    </course>
+    <course>
+      <number>CMSC 28000</number>
+     <title>Introduction to Formal Languages</title>
+     <instructor>Kurtz</instructor>
+    </course>
+    <course>
+      <number>CMSC 37100</number>
+      <title>Topics in Algorithms</title>
+      <instructor>Mulmuley</instructor>
+    </course>
+    <course>
+      <number>CMSC 37110</number>
+      <title>Discrete Mathematics</title>
+      <instructor>Babai</instructor>
+    </course>
+    <course>
+      <number>CMSC 38600</number>
+      <title>Complexity Theory A</title>
+      <not-offered year="AY 2009-10"/>
+    </course>
+    <course>
+      <number>CMSC 39000</number>
+      <title>Computational Geometry</title>
+      <not-offered year="AY 2009-10"/>
+    </course>
+    <course>
+      <number>CMSC 38512</number>
+      <title>Kolmogorov Complexity</title>
+      <instructor>Simon</instructor>
+    </course>
+    <course>
+      <number>CSPP 55001</number>
+      <title>Algorithms</title>
+      <instructor>Simon</instructor>
+    </course>
+  </quarter>
+  <quarter term="Winter" year="2010">
+    <course>
+      <number>CMSC 16200</number>
+      <title>Honors Introduction to Computer Science, II</title>
+      <instructor>Kurtz</instructor>
+    </course>
+    <course>
+      <number>CMSC 27200</number>
+      <title>Algorithms</title>
+      <instructor>Simon</instructor>
+    </course>
+    <course>
+      <number>CMSC 27800</number>
+      <title>Mathematical Logic II</title>
+      <instructor type="nontheory">Hirschfeldt</instructor>
+    </course>
+    <course>
+      <number>CMSC 37000</number>
+      <title>Algorithms</title>
+      <instructor>Babai</instructor>
+    </course>
+    <course>
+      <number>CMSC 37100</number>
+      <title>Topics in Algorithms</title>
+      <instructor>Chuzhoy</instructor>
+    </course>
+    <course>
+      <number>CMSC 38000</number>
+      <title>Computability Theory, I</title>
+      <instructor>Soare</instructor>
+      <note>Ident MATH 30200</note>
+    </course>
+    <course>
+      <number>CMSC 38500</number>
+      <title>Computability and Complexity Theory</title>
+      <instructor>Razborov</instructor>
+    </course>
+  </quarter>
+  <quarter term="Spring" year="2010">
+    <course>
+      <number>CMSC 27400</number>
+      <title>Honors Combinatorics and Probability</title>
+      <instructor>Babai</instructor>
+      <note> Ident MATH 28400, CMSC 37200</note>
+    </course>
+    <course>
+      <number>CMSC 27500</number>
+      <title>Graph Theory</title>
+      <instructor>Mulmuley</instructor>
+    </course>
+    <course>
+      <number>CMSC 28100</number>
+      <title>Introduction to Complexity Theory, I</title>
+      <instructor>Mulmuley</instructor>
+    </course>
+    <course>
+      <number>CMSC 37200</number>
+      <title>Combinatorics</title>
+      <instructor>Babai</instructor>
+      <note>Ident CMSC 27400, MATH 28400</note>
+    </course>
+    <course>
+      <number>CMSC 38100</number>
+      <title>Computability Theory, II</title>
+      <instructor>Soare</instructor>
+      <note>Ident MATH 30300</note>
+    </course>
+    <course>
+      <number>CMSC 38700</number>
+      <title>Complexity Theory B</title>
+      <instructor>Razborov</instructor>
+    </course>
+    <course>
+      <number>MATH 30400</number>
+      <title>Computability Theory, III</title>
+      <instructor>Soare</instructor>
+    </course>
+  </quarter>
+</course-schedule>

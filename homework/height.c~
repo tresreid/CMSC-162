@@ -1,0 +1,8 @@
+//height.c
+#include <stdio.h>
+
+int height(){
+  printf("Please enter your height: ");
+  scanf("%d", &a);
+  return a;
+}

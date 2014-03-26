@@ -1,0 +1,54 @@
+import xml.etree.ElementTree as ET 
+from datetime import date 
+from sys import argv 
+template = '{:<10} {:>7} {:>7} {:>7} {:>7} {:>7}' 
+def num(text): 
+    if text is None: 
+        return 0.0 
+    return float(text) 
+
+def nstr(s): 
+    if s is None: 
+        return '.....' 
+    return s 
+
+class Gymnast(object): 
+    events = ['vault','bars','beam','floor'] 
+    def __init__(self,element): 
+        self.name = element.find('name').text 
+        for field in Gymnast.events: 
+            setattr(self,field,element.find(field).text) 
+        self.all = sum(map(lambda field: num(getattr(self,field)), Gymnast.events)) 
+
+        def __str__(self): 
+            return template.format(nstr(self.name), 
+                                   nstr(self.vault), 
+                                   nstr(self.bars), 
+                                   nstr(self.beam), 
+                                   nstr(self.floor), 
+                                   '{: 6.3f}'.format(self.all)) 
+        
+        def __lt__(self,other): 
+            return other.all < self.all 
+
+# grab the XML 
+
+doc = ET.parse(argv[1]) 
+meet = doc.getroot() 
+
+# print the header 
+
+print(meet.get('name')) 
+year,month,day = meet.get('date').split('-') 
+print(date(int(year),int(month),int(day)).strftime('%b %d, %Y')) 
+print() 
+
+print(template.format('name','vault','bars','beam','floor','all')) 
+print(template.format('---------','-----','-----','-----','-----','------')) 
+
+# print the table entries 
+
+gymnasts = list(map(Gymnast,doc.findall('.//gymnast'))) 
+gymnasts.sort() 
+for g in gymnasts: 
+    print(g)

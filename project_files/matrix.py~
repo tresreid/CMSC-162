@@ -1,0 +1,147 @@
+
+class matrix:
+    def show(self,matrix):
+        for item in matrix:
+            print item
+
+    def makeMatrix(self,rowelm,colelm):
+        matrix = [];
+        print("Numbers are entered one at a time from left to right across the row then top to bottom through each coloum")
+        for i in range(int(colelm)):
+            print("starting new row")
+            row = []
+            for j in range(int(rowelm)):
+                n = raw_input("num: ")
+                row.append(int(n))
+            matrix.append(row)
+        print("Entered matrix")
+        for item in matrix:
+            print item
+        return matrix
+
+    def addMatrix(self,m1,m2):
+        if (len(m1) != len(m2)):
+            print("Cannot add matrices. mismatch")
+        elif(len(m1[0]) != len(m2[0])):
+            print("Cannot add matrices. mismatch")
+        else:
+            m3=[]
+            for i in range(len(m1)):
+                row=[]
+                for j in range(len(m1[0])):
+                    n= m1[i][j] +m2[i][j]
+                    row.append(int(n))
+                m3.append(row)
+            return m3
+
+    def scalMult(self,m1,scal):
+        m2=[]
+        for i in range(len(m1)):
+            row=[]
+            for j in range(len(m1[0])):
+                n= (float(scal)* (m1[i][j])) 
+                row.append(n)      
+            m2.append(row)
+        return m2
+       
+    def transpose(self,m1):
+        m2=[]
+        for i in range(len(m1[0])):
+            row=[]
+            for j in range(len(m1)):
+                n= ((m1[j][i])) 
+                row.append(int(n))    
+            m2.append(row)
+        return m2
+       
+    def multMatrix(self,m1,m2):
+        if (len(m1[0]) != len(m2)):
+            print("Cannot add matrices. mismatch")
+        else:
+            m3=[]
+            for i1 in range(len(m1)):
+                row=[]
+                for i2 in range(len(m2[0])):
+                    sum=0
+                    for j in range(len(m1[0])):
+                        x = m1[i1][j] * m2[j][i2]
+                        sum+=x
+                    row.append(sum)
+                m3.append(row)
+            return m3
+           
+    def detMatrix(self,m1):
+        if(len(m1) != len(m1[0])):
+            print("Error, not a square matrix")
+        else:
+            det=0
+            if(len(m1) == 1):
+                det = m1[0][0]
+            elif (len(m1)==2):
+                det = (m1[0][0]*m1[1][1])-(m1[1][0]*m1[0][1])
+            else:
+                dets=[]
+                s = self
+                for i in range(len(m1)):
+                    n = m1[0][i] * s.detMatrix(s.minor(m1,0,i))
+                    dets.append(n*((-1)**i))
+                det=sum(dets)
+            return det
+
+    def minor(self,m1,r,c):
+        m2=[]
+        for i in range(len(m1)):
+            if (i==r):
+                pass
+            else:
+                row=[]
+                for j in range(len(m1[0])):
+                    if (j==c):
+                        pass
+                    else:
+                        n= m1[i][j] 
+                        row.append(n)        
+                m2.append(row)
+        return m2
+    def cofactor(self, m1):
+       m2=[]
+       s = self
+       for i in range(len(m1)):
+           row=[]
+           for j in range(len(m1[0])):
+               cofactor= (s.detMatrix(s.minor(m1,i,j)))*((-1)**(i+j)) 
+               row.append(cofactor)        
+           m2.append(row)
+       return m2
+           
+    def inverse(self,m1):
+        s= self
+        det = s.detMatrix(m1)
+        if (det == 0):
+            print("Singular matrix. No inverse")
+        else:
+            m2= s.cofactor(m1)
+            m3 = s.transpose(m2)
+            m4 = s.scalMult(m3,det**(-1))
+        return m4
+
+    def sofeq(self,m1,m2):
+        s = self
+        if (len(m1) != len(m2)):
+            print("Dimension mismatch")
+        else:
+            if (s.detMatrix(m1) == 0):
+                print("Determinate equals 0. Solution not unique or does not exist")
+            else:
+                m3= s.multMatrix(s.inverse(m1),m2)
+                for i in range(len(m3)):
+                    print('x', i,' = ',m3[i][0]) 
+
+    def trace(self,m1):
+        if (len(m1) != len(m1[0])):
+            print("not a square matrix, cannot trace")
+        else:
+            tra = 0
+            for i in range(len(m1)):
+                tra += m1[i][i]
+        return tra

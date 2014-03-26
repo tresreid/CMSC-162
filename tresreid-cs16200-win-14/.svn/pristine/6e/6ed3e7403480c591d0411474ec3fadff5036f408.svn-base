@@ -1,0 +1,10 @@
+#!/bin/bash
+
+d=`date` 
+s=`du -ch ~ |grep total`
+#these two are used to call the action on the same line. the usage.log file is located in Documents/CMCS162/tresreid-cs16200-win-14/lab1/usage.log
+echo -n [$d]' '>> ~/Documents/CMCS162/tresreid-cs16200-win-14/lab1/usage.log
+echo -n ~ ' '>> ~/Documents/CMCS162/tresreid-cs16200-win-14/lab1/usage.log
+echo $s >> ~/Documents/CMCS162/tresreid-cs16200-win-14/lab1/usage.log
+exit 0
+

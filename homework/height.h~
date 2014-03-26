@@ -1,0 +1,8 @@
+//height.h
+
+
+#ifndef HEIGHT_H
+#define HEIGHT_H
+
+int height();
+#endif

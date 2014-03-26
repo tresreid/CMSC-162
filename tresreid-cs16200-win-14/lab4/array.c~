@@ -1,0 +1,58 @@
+//array.c 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]){
+  int position;
+  int value;
+  int arraysize = 1;
+  int *array;
+  array = (int *) malloc(arraysize);
+  do{
+    puts("Enter a position (-1 and an arbitrary value to exit): ");
+    scanf("%d", &position);
+    puts("Enter a value: ");
+    scanf("%d", &value);
+    if (position > arraysize){
+      int temparray[arraysize];
+      int i=0;
+      while(i<arraysize){
+	*(temparray + i)= *(array+i);
+	i++;
+      }
+      arraysize = position+1;
+      array = (int *) realloc(array, arraysize);
+      free(array);
+      int l=0;
+      while(l<arraysize){
+	array[l] = -1;
+	l++;
+      }
+      int j=0;
+      while(j<arraysize){
+	array[j] = temparray[j];
+	j++;
+      }
+      array[position] = value;
+    }
+    else{
+      array[position] = value;
+    }
+  }while(position != -1);
+  
+  int k=0;
+  while(k<arraysize+1){
+    printf("%s","array[");
+    printf("%d",k);
+    printf("%s","] = ");
+    if(!array[k]){
+      puts("No value assigned\n");
+      k++;
+    }
+    else{
+      printf("%d\n", array[k]);
+      k++;
+	}
+  }
+}

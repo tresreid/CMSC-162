@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE library SYSTEM "library.dtd">
+
+<library name="J. Random Hacker's Library">
+<books>
+	<book id="EndersGame94">
+		<title>Ender's Game</title>
+		<author>Orson Scott Card</author>
+		<publisher>Tor Science Fiction</publisher>
+		<year>1994</year>
+	</book>
+	<book id="Hackers">
+		<title>Hackers: Heroes of the Computing Revolution</title>
+		<author>Steven Levy</author>
+	</book>
+	<book id="Grid03">
+		<title>The Grid 2: Blueprint for a New Computing Infrastructure</title>
+		<editor>Ian Foster</editor>
+		<editor>Carl Kesselman</editor>
+		<publisher>Morgan Kaufmann</publisher>
+		<year>2003</year>
+	</book>
+</books>
+
+<movies>
+	<movie id="TBTNBC93">
+		<title>The Nightmare Before Christmas</title>
+		<director>Henry Selick</director>
+		<year>1993</year>
+	</movie>
+	<movie id="EdWood" oscarwinner="yes">
+		<title>Ed Wood</title>
+		<director>Tim Burton</director>
+		<year>1994</year>
+	</movie>
+	<movie id="DayBeast95" oscarwinner="no">
+		<title>The Day of the Beast</title>
+		<director>Alex de la Iglesia</director>
+		<year>1995</year>
+	</movie>
+</movies>
+
+<music>
+	<album id="Wembley86">
+		<title>Live at Wembley '86</title>
+		<artist>Queen</artist>
+		<year>1996</year>
+	</album>
+	<album id="Farewell95">
+		<title>Farewell: Live at Universal Amphitheater</title>
+		<artist>Oingo Boingo</artist>
+		<year>1995</year>
+	</album>
+	<album id="Oskorri96">
+		<title>25 kantu-urte</title>
+		<artist>Oskorri</artist>
+		<year>1996</year>
+	</album>
+</music>
+
+</library>

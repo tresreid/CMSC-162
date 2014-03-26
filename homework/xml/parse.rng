@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--parse.rng --> 
+<element name='particles' xmlns="http://relaxng.org/ns/structure/1.0">
+  <zeroOrMore>
+    <element name ="quark">
+      <attribute name ="number-of-types">
+        <text/>
+      </attribute>
+      <zeroOrMore>
+	<element name="particle">
+          <element name="name">
+             <text/>
+          </element>
+          <element name="mass">
+             <text/>
+          </element>
+          <element name="charge">
+             <text/>
+          </element>
+          <element name="symbol">
+             <text/>
+          </element>
+        </element>
+      </zeroOrMore>
+    </element>
+    <element name ="lepton">
+      <attribute name ="number-of-types">
+        <text/>
+      </attribute>
+      <zeroOrMore>
+	<element name="particle">
+          <element name="name">
+             <text/>
+          </element>
+          <element name="mass">
+             <text/>
+          </element>
+          <element name="charge">
+             <text/>
+          </element>
+          <element name="symbol">
+             <text/>
+          </element>
+        </element>
+      </zeroOrMore>
+    </element>
+    <element name = "boson">
+      <zeroOrMore>
+        <element name = "force-carrier">
+          <element name= "name">
+            <text/>
+          </element>
+          <element name = "mass">
+            <text/>
+          </element>
+          <element name="charge">
+            <text/>
+          </element>
+          <element name = "symbol">
+            <text/>
+          </element>
+          <element name= "associated-force">
+            <text/>
+          </element>
+	</element>
+      </zeroOrMore>
+    </element>
+  </zeroOrMore>
+</element>

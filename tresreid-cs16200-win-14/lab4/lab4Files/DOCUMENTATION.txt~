@@ -1,0 +1,10 @@
+Michael Reid
+Omar Agha
+Ben Call
+
+Problems:                               Solution:
+the files never close -			use fclose at the end 
+
+overflow error with words over 100	use fread instead of fscanf so
+characters (shouldn't normally be a  	there is no longer an overflow.
+problem but it is with segfault.txt

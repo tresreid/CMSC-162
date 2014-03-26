@@ -1,0 +1,16 @@
+
+
+target = raw_input("Input target value: ")
+terms = raw_input("Input number of terms: ")
+i=0
+j=0
+def psum(series):
+    
+def nsum(series):
+
+while(max(i,j)<terms):
+    if(series<=target):
+        #adding series function
+    else:
+        #sub series function
+print(series)

@@ -1,0 +1,11 @@
+#!/bin/bash
+cur=`pwd`
+while [ "$echo $cur" != "$ echo /" ]
+do
+    ls -l | wc -l
+    wc -l *.sh
+    echo
+    cd ..
+done
+
+exit 0
